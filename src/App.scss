@@ -1,0 +1,18 @@
+* {
+  transition: all .6s;
+  font-family: "Mabry-Regular", sans-serif;
+}
+
+.App {
+  text-align: center;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@media only screen and (max-width: 1000px) {
+  .item_1 {
+    padding-top: 10vh;
+  }
+}

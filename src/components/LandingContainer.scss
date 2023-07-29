@@ -1,0 +1,364 @@
+@import "../assets/Variables.scss";
+
+.landing {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1.75px solid black;
+
+  section {
+    width: 50%;
+    height: 100%;
+  }
+
+  .landing_left {
+    background-color: $pink;
+    border-right: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: center;
+      gap: 35px;
+      width: 60%;
+
+      h2 {
+        font-size: 72px;
+        font-weight: 300;
+        text-align: left;
+        line-height: 1;
+        margin: 0;
+        padding: 0;
+        width: fit-content;
+      }
+
+      h4 {
+        font-weight: 300;
+        font-size: 20px;
+        text-align: left;
+        margin: 0;
+        padding: 0;
+      }
+
+      .sell_btn {
+        transition: 0.175s ease-out;
+        gap: 0;
+        width: fit-content;
+
+        &:hover {
+          transform: translate(-10px, -10px);
+
+          .shadow_1 {
+            transform: translate(10px, 10px);
+          }
+
+          .shadow_2 {
+            transform: translate(20px, 20px);
+          }
+        }
+        a {
+          background-color: black;
+          color: white;
+          font-size: 20px;
+          cursor: pointer;
+          padding: 15px 70px;
+          border-radius: 5px;
+          text-align: center;
+          z-index: 0;
+          border: 1.75px solid black;
+        }
+
+        .shadow_1,
+        .shadow_2 {
+          position: absolute;
+          cursor: default;
+          border: 1.75px solid black;
+        }
+
+        .shadow_1 {
+          z-index: -1;
+          background-color: $pink;
+          color: $pink;
+        }
+
+        .shadow_2 {
+          z-index: -2;
+          background-color: $yellow;
+          color: $yellow;
+        }
+      }
+    }
+  }
+
+  .landing_right {
+    background-color: $yellow;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    .main_image {
+      width: 65%;
+    }
+
+    .floatImage1_parent {
+      height: 100%;
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+
+      .floatImage1 {
+        position: absolute;
+        top: 17.5vh;
+        right: 6vw;
+        height: 22.5vh;
+      }
+    }
+
+    .floatImage2_parent {
+      height: 100%;
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+
+      .floatImage2 {
+        position: absolute;
+        bottom: 10vh;
+        left: 6vw;
+        height: 22.5vh;
+      }
+    }
+
+    .floatImage3_parent {
+      height: 100%;
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      z-index: 10;
+
+      .floatImage3_div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        width: 50px;
+        border-radius: 50px;
+        width: fit-content;
+        height: fit-content;
+        padding: 5px 12.5px;
+        position: absolute;
+        bottom: 20vh;
+        right: 6vw;
+
+        p {
+          padding: 0;
+          margin: 0;
+        }
+
+        .floatImage3 {
+          height: 4vh;
+        }
+      }
+
+      .floatImage3_div_original {
+        cursor: pointer;
+        background-color: white;
+        border: 1.75px solid black;
+        z-index: 0;
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          transform: translate(-5px, -5px);
+
+          .floatImage3_shadow {
+            transform: translate(5px, 5px);
+          }
+        }
+      }
+
+      .floatImage3_shadow {
+        background-color: black;
+        border: 1.75px solid black;
+        z-index: -1;
+      }
+    }
+
+    .text_parent {
+      height: 100%;
+      width: 50vw;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: end;
+      position: absolute;
+
+      p {
+        padding-left: 25px;
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  .landing {
+    flex-direction: column;
+    height: 100%;
+
+    section {
+      width: 100%;
+      height: fit-content;
+      padding: 10% 0%;
+    }
+
+    .landing_left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 1.75px solid black;
+
+      div {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 35px;
+
+        h2 {
+          text-align: center;
+        }
+
+        h4 {
+          text-align: center;
+        }
+      }
+
+      .sell_btn {
+        width: 75%;
+        a {
+          width: fit-content;
+        }
+      }
+    }
+
+    .landing_right {
+      background-color: $yellow;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+
+      .main_image {
+        width: 65%;
+      }
+
+      .floatImage1_parent {
+        height: 100%;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        .floatImage1 {
+          position: absolute;
+          top: 17.5vh;
+          right: -12.5vw;
+          width: 15vw;
+        }
+      }
+
+      .floatImage2_parent {
+        height: 100%;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+
+        .floatImage2 {
+          position: absolute;
+          bottom: 20vh;
+          left: -15vw;
+          width: 20vw;
+        }
+      }
+
+      .floatImage3_parent {
+        height: 100%;
+        width: 50vw;
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        z-index: 10;
+
+        .floatImage3_div {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+          width: 50px;
+          border-radius: 50px;
+          width: fit-content;
+          height: fit-content;
+          padding: 5px 12.5px;
+          position: absolute;
+          bottom: 20vh;
+          right: -12.5vw;
+
+          p {
+            padding: 0;
+            margin: 0;
+          }
+
+          .floatImage3 {
+            height: 4vh;
+          }
+        }
+
+        .floatImage3_div_original {
+          cursor: pointer;
+          background-color: white;
+          border: 1.75px solid black;
+          z-index: 0;
+          text-decoration: none;
+          color: black;
+
+          &:hover {
+            transform: translate(-5px, -5px);
+
+            .floatImage3_shadow {
+              transform: translate(5px, 5px);
+            }
+          }
+        }
+
+        .floatImage3_shadow {
+          background-color: black;
+          border: 1.75px solid black;
+          z-index: -1;
+        }
+      }
+
+      .text_parent {
+        display: none;
+      }
+    }
+  }
+}
